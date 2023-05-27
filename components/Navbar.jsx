@@ -8,7 +8,7 @@ const NavBar = () => {
   return (
     <div className="bg-slate-800 border-b text-white text-center z-50 flex justify-between px-4 py-1">
       <div className="font-bold text-xl items-center flex">
-        <p>Jens-Movie-Search-App</p>
+        <p>Movie-App</p>
       </div>
       <div className="flex items-center">
         <div
