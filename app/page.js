@@ -20,6 +20,7 @@ export default function Home() {
     );
     const data = await response.json();
     dispatch(changeMovieData(data.results));
+    setInput("")
   };
 
   return (
@@ -34,7 +35,7 @@ export default function Home() {
         }`}
       >
         <p>
-          {movieData === undefined
+          {movieData === null
             ? "Search for movies across the internet"
             : "Look up another one?"}
         </p>
@@ -69,7 +70,7 @@ export default function Home() {
         />
       </div>
       <div class="mt-20 grid grid-flow-row xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-7">
-        {movieData !== undefined ? (
+        {movieData !== null ? (
           movieData.map((movie) => (
             <MovieCard
               title={movie.title}
